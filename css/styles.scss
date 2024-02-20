@@ -1,0 +1,79 @@
+// $largeDesktopViewport: 1920px;
+// $desktopViewport: 1440px;
+// $laptopViewport: 1024px;
+// $tabletViewport: 768px;
+// $mobileViewport: 425px;
+// $smallMobileViewport: 375px;
+
+body {
+    margin: unset;
+    --swedbank-white: #FFFFFF;
+    --swedbank-gray: #EBE7E2;
+    --swedbank-gray2: #DDCDC4;
+    --swedbank-orange: #FB661D;
+    --swedbank-turquoise: #31A3AE;
+    --swedbank-beige: #FBF2EA;
+    --swedbank-blue: #5B8AD6;
+    --swedbank-yellow: #F4BA44;
+    --swedbank-purple: #C5569A;
+    --swedbank-lightblue: #E9F7FB;
+    --swedbank-gradient: linear-gradient(to right, #FB661D 0%, #F4BA44 100%);
+    --swedbank-main-color: #512B2B;
+    --swedbank-font-family-main: Roboto, sans-serif;
+    --swedbank-font-family-secondary: 'Exo 2', sans-serif;
+    --swedbank-footer: #EBE7E2;
+    --button-padding: 8px 16px;
+    color: var(--swedbank-main-text-color);
+    font-family: var(--swedbank-font-family-main);
+}
+
+body.dimmed { // dark overlay when hovering the header tabs
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    ui-header {
+        z-index: 3;
+        background-color: white;
+    }
+}
+
+ui-header {
+    display: block;
+    position: relative;
+    --logo-width: fit-content;
+    --logo-padding: 10px 20px;
+    --menu-tab-padding-tb: 10px;
+    --menu-tab-padding-lr: 20px;
+    --menu-tab-width: 100%;
+}
+
+ui-footer {
+    display: block;
+    background-color: var(--swedbank-footer);
+    --footer-content-padding-tb: 20px;
+    --footer-content-padding-lr: 20px;
+    --footer-content-width: calc(1440px - var(--footer-content-padding-lr) * 2);
+}
+
+ui-home {
+    display: block;
+    background-color: var(--swedbank-beige);
+    --home-content-padding-tb: 20px;
+    --home-content-padding-lr: 20px;
+    --home-content-width: calc(1440px - var(--home-content-padding-lr) * 2);
+    --home-content-block-padding: 20px;
+    --home-overview-padding: 10px;
+}
+
+ui-disclaimer {
+    display: block;
+    --disclaimer-padding: 32px 20px;
+}
